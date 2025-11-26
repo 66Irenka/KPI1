@@ -1,0 +1,67 @@
+<h2>Селектори ідентифікаторів</h2>
+
+<p>
+Ідентифікатори використовуються для унікальних елементів сторінки,
+з якими потрібно працювати окремо — як у CSS, так і у JavaScript.
+У проєкті інтерактивного каталогу ідентифікатори активно застосовуються
+для секцій сторінки, модального вікна, полів пошуку та кнопок.
+</p>
+
+<h3>Приклад 1. Навігація по сторінці</h3>
+
+<pre><code>&lt;main id="home" class="container"&gt; ... &lt;/main&gt;
+&lt;section id="about" class="blog-section"&gt; ... &lt;/section&gt;
+&lt;footer class="app-footer" id="contact"&gt; ... &lt;/footer&gt;
+</code></pre>
+
+<p>
+Ідентифікатори <code>home</code>, <code>about</code>, <code>contact</code> дозволяють здійснювати
+плавний перехід по сторінці з меню шапки:
+<code>&lt;a href="#home"&gt;Головна&lt;/a&gt;</code>,
+<code>&lt;a href="#about"&gt;Блог&lt;/a&gt;</code>,
+<code>&lt;a href="#contact"&gt;Контакти&lt;/a&gt;</code>.
+</p>
+
+<h3>Приклад 2. Модальне вікно з інформацією про книгу</h3>
+
+<pre><code>&lt;div id="bookModal" class="modal-backdrop" aria-hidden="true"&gt; ... &lt;/div&gt;</code></pre>
+
+<p>
+Ідентифікатор <code>bookModal</code> використовується для керування модальним
+вікном через JavaScript: відкриття, закриття, зміна вмісту при натисканні
+на картку книги.
+</p>
+
+<h3>Приклад 3. Поля пошуку та елементи керування</h3>
+
+<pre><code>&lt;select id="episodeSelect"&gt;...&lt;/select&gt;
+&lt;select id="sortSelect"&gt;...&lt;/select&gt;
+&lt;input type="text" id="searchInput" ...&gt;
+&lt;button id="resetSearchButton"&gt;Скинути&lt;/button&gt;
+&lt;button id="themeToggle" class="theme-toggle"&gt;🌙 Тема&lt;/button&gt;
+</code></pre>
+
+<figure class="lab-screenshot">
+    <img src="../images/ids-example.png" alt="Скрін стилів елементів пошуку: searchInput, searchCount, resetSearchButton">
+    <figcaption>
+        Рис. X – Стилізація елементів панелі пошуку (<code>#searchInput</code>, <code>#searchCount</code>, <code>#resetSearchButton</code>).
+    </figcaption>
+</figure>
+
+<p>
+Ідентифікатори <code>episodeSelect</code>, <code>sortSelect</code>, <code>searchInput</code>,
+<code>resetSearchButton</code>, <code>themeToggle</code> дозволяють отримувати
+доступ до цих елементів у скрипті <code>script.js</code>, змінювати тему, скидати
+пошук, виконувати запити до API та оновлювати результати.
+</p>
+
+<h3>Приклад 4. Кнопка прокрутки «догори»</h3>
+
+<figure class="lab-screenshot">
+    <img src="../images/ids-example_scroll.png"
+         alt="Скрін зі стилями для кнопки #scrollTopBtn у файлі style.css">
+    <figcaption>
+        Рис. 3 – Приклад селектора ідентифікатора для кнопки прокрутки сторінки догори.
+    </figcaption>
+</figure>
+

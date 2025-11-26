@@ -1,0 +1,39 @@
+<h2>Основний код застосунку</h2>
+
+<p>Нижче наведено основні фрагменти HTML, CSS та JS, що формують роботу застосунку.</p>
+
+<h3>HTML-структура</h3>
+<pre><code>&lt;header class="app-header"&gt;
+  &lt;div class="filters-card"&gt;
+    &lt;input id="searchInput"&gt;
+    &lt;button id="resetSearchButton"&gt;Скинути&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;main id="home" class="container"&gt;
+  &lt;div id="root"&gt;&lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+
+<h3>CSS (скорочено)</h3>
+<pre><code>.episode-item {
+  background: var(--color-bg-card);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+  padding: 20px;
+  transition: 0.2s;
+}
+.episode-item:hover {
+  transform: translateY(-5px);
+}
+</code></pre>
+
+<h3>JavaScript</h3>
+<pre><code>async function loadBooks() {
+  const url = "https://www.googleapis.com/books/v1/volumes?q=subject:fiction";
+  const response = await fetch(url);
+  const data = await response.json();
+  renderBooks(data.items);
+}
+</code></pre>
+
+<p>Повний код застосунку доступний на <a href="https://66irenka.github.io/IP-zp51_appWEB-PavlenkoIryna-FIOT-2025/" target="_blank">GitHub Pages</a>.</p>
