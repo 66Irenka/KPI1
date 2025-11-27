@@ -1,164 +1,182 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Звіт Лабораторна 2 | Павленко І. А.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script>
-        // Функція для завантаження внутрішніх HTML-сторінок у правий блок
-        async function loadPage(page) {
-            try {
-                let response = await fetch("lab2content/" + page); // Завантаження файлу
-                let text = await response.text();                  // Отримання тексту
-                document.getElementById("output").innerHTML = text; // Виведення у праву панель
-            } catch (err) {
-                // Виведення повідомлення про помилку при збоях завантаження
-                document.getElementById("output").innerHTML = "<p>Помилка завантаження файлу!</p>";
-                console.error(err);
-            }
+      
+      async function loadPage(page) {
+        try {
+          let response = await fetch('lab2content/' + page); 
+          let text = await response.text(); 
+          document.getElementById('output').innerHTML = text; 
+        } catch (err) {
+        
+          document.getElementById('output').innerHTML =
+            '<p>Помилка завантаження файлу!</p>';
+          console.error(err);
         }
+      }
     </script>
-</head>
-<body>
-
-<!-- Початок обгортки сторінки -->
-<div class="page-wrapper">
-
-    <header>
-        <!-- Верхня панель з назвою -->
-        <div class="top-bar">
-            <div class="header-container">
-                <h1 class="text">
-                    ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "Проєктування WEB-застосувань"
-                </h1>
-            </div>
+  </head>
+  <body>
+     <div class="page-wrapper">
+      <header>
+       <div class="top-bar">
+          <div class="header-container">
+            <h1 class="text">
+              ЗВІТ ПО ЛАБОРАТОРНИМ РОБОТАМ З ДИСЦИПЛІНИ "Проєктування
+              WEB-застосувань"
+            </h1>
+          </div>
         </div>
 
-        <!-- Середня панель із даними -->
         <div class="middle-bar">
-            <div class="header-container middle-row">
-                <div class="author-text">
-                    Виконавець: студентка групи ІП-зп51 Павленко І. А.
-                </div>
-
-                <div class="author-photo">
-                    <img src="img/photo1.jpg" alt="photo">
-                </div>
+          <div class="header-container middle-row">
+            <div class="author-text">
+              Виконавець: студентка групи ІП-зп51 Павленко І. А.
             </div>
+
+            <div class="author-photo">
+              <img src="img/photo1.jpg" alt="photo" />
+            </div>
+          </div>
         </div>
 
-        <!-- Нижнє меню навігації між лабораторними -->
-        <div class="bottom-bar">
-            <div class="header-container">
-                <nav class="menu">
-                    <a href="index.html">Головна</a>
-                    <a href="LB1.html">Лабораторна 1</a>
-                    <a href="LB2.html" class="active">Лабораторна 2</a>
-                    <a href="#">Лабораторна 3</a>
-                    <a href="#">Лабораторна 4</a>
-                    <a href="#">Лабораторна 5</a>
-                    <a href="#">Лабораторна 6</a>
-                    <a href="#">Лабораторна 7</a>
-                    <a href="#">Лабораторна 8</a>
-                    <a href="#">Лабораторна 9</a>
-                </nav>
-            </div>
+       <div class="bottom-bar">
+          <div class="header-container">
+            <nav class="menu">
+              <a href="index.html">Головна</a>
+              <a href="LB1.html">Лабораторна 1</a>
+              <a href="LB2.html" class="active">Лабораторна 2</a>
+              <a href="#">Лабораторна 3</a>
+              <a href="#">Лабораторна 4</a>
+              <a href="#">Лабораторна 5</a>
+              <a href="#">Лабораторна 6</a>
+              <a href="#">Лабораторна 7</a>
+              <a href="#">Лабораторна 8</a>
+              <a href="#">Лабораторна 9</a>
+            </nav>
+          </div>
         </div>
+      </header>
 
-    </header>
-
-    <div class="main-container">
-
+      <div class="main-container">
         <div class="content-section">
+         <div class="left-side">
+            <aside>
+              <nav class="left-nav">
+                <ul>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="loadPage('tema2.html')"
+                    >
+                      Тема. Мета ЛР №2. Місце розташування сайту
+                    </a>
+                  </li>
 
-            <!-- Ліва панель із внутрішнім меню лабораторної -->
-            <div class="left-side">
-                <aside>
-                    <nav class="left-nav">
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0)" onclick="loadPage('tema2.html')">
-                                    Тема. Мета ЛР №2. Місце розташування сайту
-                                </a>
-                            </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="loadPage('styles.html')"
+                    >
+                      Способи підключення стилів
+                    </a>
+                  </li>
 
-                            <li>
-                                <a href="javascript:void(0)" onclick="loadPage('styles.html')">
-                                    Способи підключення стилів
-                                </a>
-                            </li>
+                  <li>
+                    <h3>Селектори</h3>
+                    <ul class="sub-menu">
+                      <li>
+                        <a
+                          href="javascript:void(0)"
+                          onclick="loadPage('tag.html')"
+                        >
+                          Селектор тегу
+                        </a>
+                      </li>
 
-                            <li>
-                                <h3>Селектори</h3>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="javascript:void(0)" onclick="loadPage('tag.html')">
-                                            Селектор тегу
-                                        </a>
-                                    </li>
+                      <li>
+                        <a
+                          href="javascript:void(0)"
+                          onclick="loadPage('class.html')"
+                        >
+                          Селектор класу
+                        </a>
+                      </li>
 
-                                    <li>
-                                        <a href="javascript:void(0)" onclick="loadPage('class.html')">
-                                            Селектор класу
-                                        </a>
-                                    </li>
+                      <li>
+                        <a
+                          href="javascript:void(0)"
+                          onclick="loadPage('ids.html')"
+                        >
+                          Селектори ідентифікаторів
+                        </a>
+                      </li>
 
-                                    <li>
-                                        <a href="javascript:void(0)" onclick="loadPage('ids.html')">
-                                            Селектори ідентифікаторів
-                                        </a>
-                                    </li>
+                      <li>
+                        <a
+                          href="javascript:void(0)"
+                          onclick="loadPage('other-selectors.html')"
+                        >
+                          Інші селектори
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
 
-                                    <li>
-                                        <a href="javascript:void(0)" onclick="loadPage('other-selectors.html')">
-                                            Інші селектори
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                  <li>
+                    <a href="javascript:void(0)" onclick="loadPage('css.html')">
+                      CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. Кнопки
+                    </a>
+                  </li>
 
-                            <li>
-                                <a href="javascript:void(0)" onclick="loadPage('css.html')">
-                                    CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. Кнопки
-                                </a>
-                            </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="loadPage('conclusions.html')"
+                    >
+                      Висновки до ЛР №2
+                    </a>
+                  </li>
 
-                            <li>
-                                <a href="javascript:void(0)" onclick="loadPage('conclusions.html')">
-                                    Висновки до ЛР №2
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript:void(0)" onclick="loadPage('questions.html')">
-                                    Контрольні питання
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </aside>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="loadPage('questions.html')"
+                    >
+                      Контрольні питання
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+          <div class="right-side">
+            <div class="info-card" id="output">
+              <h2>Звіт до Лабораторної роботи №2</h2>
+              <p>Оберіть пункт меню зліва, щоб переглянути матеріали.</p>
             </div>
-
-            <!-- Права панель для виведення контенту -->
-            <div class="right-side">
-                <div class="info-card" id="output">
-                    <h2>Звіт до Лабораторної роботи №2</h2>
-                    <p>Оберіть пункт меню зліва, щоб переглянути матеріали.</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </div> <!-- завершення основного контейнера сторінки -->
-
-    <!-- Нижній колонтитул сайту -->
-    <footer class="footer">
+      </div>
+      <footer class="footer">
         <div class="footer-container">
-            <p>© 2025 Павленко І. А. – Звіти з лабораторних робіт з дисципліни "Проєктування WEB-застосувань"</p>
-            <p>Контакти: <a href="mailto:iryna.pavlenko@gmail.com">iryna.pavlenko@gmail.com</a></p>
+          <p>
+            © 2025 Павленко І. А. – Звіти з лабораторних робіт з дисципліни
+            "Проєктування WEB-застосувань"
+          </p>
+          <p>
+            Контакти:
+            <a href="mailto:iryna.pavlenko@gmail.com"
+              >iryna.pavlenko@gmail.com</a
+            >
+          </p>
         </div>
-    </footer>
-
-</div> <!-- кінець обгортки сторінки -->
-
-</body>
+      </footer>
+    </div>
+  </body>
 </html>

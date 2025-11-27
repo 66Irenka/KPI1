@@ -1,132 +1,153 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Головна сторінка</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- Початок обгортки сторінки -->
-<div class="page-wrapper">
-
-    <!-- Верхня панель з назвою -->
-    <header>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+       <header>
         <div class="top-bar">
-            <div class="header-container">
-                <h1 class="text">
-                    ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "Проєктування WEB-застосувань"
-                </h1>
-            </div>
+          <div class="header-container">
+            <h1 class="text">
+              ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "Проєктування
+              WEB-застосувань"
+            </h1>
+          </div>
         </div>
 
-        <!-- Середня панель із даними -->
         <div class="middle-bar">
-            <div class="header-container middle-row">
-                <div class="author-text">
-                    Виконавець: студентка групи ІП-зп51 Павленко І. А.
-                </div>
-                <div class="author-photo">
-                    <img src="img/photo1.jpg" alt="photo">
-                </div>
+          <div class="header-container middle-row">
+            <div class="author-text">
+              Виконавець: студентка групи ІП-зп51 Павленко І. А.
             </div>
+            <div class="author-photo">
+              <img src="img/photo1.jpg" alt="photo" />
+            </div>
+          </div>
         </div>
 
-        <!-- Нижнє меню навігації між лабораторними -->
         <div class="bottom-bar">
-            <div class="header-container">
-                <nav class="menu">
-                    <a href="index.html">Головна</a>
-                    <a href="LB1.html">Лабораторна 1</a>
-                    <a href="LB2.html">Лабораторна 2</a>
-                    <a href="#">Лабораторна 3</a>
-                    <a href="#">Лабораторна 4</a>
-                    <a href="#">Лабораторна 5</a>
-                    <a href="#">Лабораторна 6</a>
-                    <a href="#">Лабораторна 7</a>
-                    <a href="#">Лабораторна 8</a>
-                    <a href="#">Лабораторна 9</a>
-                </nav>
-            </div>
+          <div class="header-container">
+            <nav class="menu">
+              <a href="index.html">Головна</a>
+              <a href="LB1.html">Лабораторна 1</a>
+              <a href="LB2.html">Лабораторна 2</a>
+              <a href="#">Лабораторна 3</a>
+              <a href="#">Лабораторна 4</a>
+              <a href="#">Лабораторна 5</a>
+              <a href="#">Лабораторна 6</a>
+              <a href="#">Лабораторна 7</a>
+              <a href="#">Лабораторна 8</a>
+              <a href="#">Лабораторна 9</a>
+            </nav>
+          </div>
         </div>
-    </header>
+      </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-container">
+      <div class="main-container">
         <div class="content-section">
+          <div class="left-side">
+            <aside>
+              <nav class="left-nav">
+                <ul>
+                  <li>
+                    <a href="#" onclick="showTab('welcome')">Ласкаво просимо</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="showTab('course')">Опис курсу</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="showTab('instructions')">Інструкції</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="showTab('contacts')"
+                      >Контакти студента</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
 
-            <!-- ЛІВА ПАНЕЛЬ -->
-            <div class="left-side">
-                <aside>
-                    <nav class="left-nav">
-                        <ul>
-                            <li><a href="#" onclick="showTab('welcome')">Ласкаво просимо</a></li>
-                            <li><a href="#" onclick="showTab('course')">Опис курсу</a></li>
-                            <li><a href="#" onclick="showTab('instructions')">Інструкції</a></li>
-                            <li><a href="#" onclick="showTab('contacts')">Контакти студента</a></li>
-                        </ul>
-                    </nav>
-                </aside>
+          <div class="right-side">
+            <div class="info-card" id="output">
+              <div id="welcome" class="tab-content">
+                <h2>Вітаємо!</h2>
+                <p>
+                  До вашої уваги звіт по лабораторним робітам з дисципліни
+                  "Проєктування WEB-застосувань".
+                </p>
+              </div>
+
+              <div id="course" class="tab-content" style="display: none">
+                <h2>Опис курсу</h2>
+                <p>
+                  Курс присвячений розробці веб-застосунків з використанням
+                  HTML, CSS та JavaScript. У рамках лабораторних робіт
+                  створюються структури сторінок, застосовуються стилі та
+                  реалізується інтерактивність.
+                </p>
+              </div>
+
+              <div id="instructions" class="tab-content" style="display: none">
+                <h2>Інструкції для користувачів</h2>
+                <ul>
+                  <li>Оберіть лабораторну роботу у верхньому меню.</li>
+                  <li>
+                    Для перегляду звіту скористайтеся лівим меню відповідної
+                    лабораторної.
+                  </li>
+                  <li>
+                    Демонстрацію проєкту можна переглянути у вбудованому фреймі
+                    (iframe), якщо це передбачено.
+                  </li>
+                  <li>
+                    Рекомендовано відкривати сторінки на локальному або
+                    віддаленому сервері.
+                  </li>
+                </ul>
+              </div>
+
+              <div id="contacts" class="tab-content" style="display: none">
+                <h2>Контакти студента</h2>
+                <p>
+                  Email:
+                  <a href="mailto:iryna.pavlenko@gmail.com"
+                    >iryna.pavlenko@gmail.com</a>
+                </p>
+                <p>
+                  Телефон: <a href="tel:+380988375047">+38 (098) 837 50 47</a>
+                </p>
+              </div>
             </div>
-
-            <!-- ПРАВА ПАНЕЛЬ -->
-            <div class="right-side">
-                <div class="info-card" id="output">
-
-                    <!-- Вкладки головної сторінки -->
-                    <div id="welcome" class="tab-content">
-                        <h2>Ласкаво просимо!</h2>
-                        <p>Тут зібрані звіти з лабораторних робіт з дисципліни "Проєктування WEB-застосувань".</p>
-                    </div>
-
-                    <div id="course" class="tab-content" style="display:none;">
-                        <h2>Опис курсу</h2>
-                        <p>
-                            Курс присвячений розробці веб-застосунків з використанням HTML, CSS та JavaScript.
-                            У рамках лабораторних робіт створюються структури сторінок, застосовуються стилі та
-                            реалізується інтерактивність.
-                        </p>
-                    </div>
-
-                    <div id="instructions" class="tab-content" style="display:none;">
-                        <h2>Інструкції для користувачів</h2>
-                        <ul>
-                            <li>Оберіть лабораторну роботу у верхньому меню.</li>
-                            <li>Для перегляду звіту скористайтеся лівим меню відповідної лабораторної.</li>
-                            <li>Демонстрацію проєкту можна переглянути у вбудованому фреймі (iframe), якщо це передбачено.</li>
-                            <li>Рекомендовано відкривати сторінки на локальному або віддаленому сервері.</li>
-                        </ul>
-                    </div>
-
-                    <div id="contacts" class="tab-content" style="display:none;">
-                        <h2>Контакти студента</h2>
-                        <p>Email: <a href="mailto:iryna.pavlenko@gmail.com">iryna.pavlenko@gmail.com</a></p>
-                        <p>Телефон: <a href="tel:+380988375047">+38 (098) 837 50 47</a></p>
-                    </div>
-
-                </div>
-            </div>
-        </div> <!-- кінець секції контенту -->
-    </div> <!-- кінець головного контейнера -->
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Павленко І. А. – Звіти з лабораторних робіт з дисципліни "Проєктування WEB-застосувань"</p>
-            <p>Контакти: <a href="mailto:iryna.pavlenko@gmail.com">iryna.pavlenko@gmail.com</a></p>
+          </div>
         </div>
-    </footer>
+      </div>
 
-</div> <!-- кінець обгортки сторінки -->
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-container">
+          <p>
+            &copy; 2025 Павленко І. А. – Звіти з лабораторних робіт з дисципліни
+            "Проєктування WEB-застосувань"
+          </p>
+          <p>
+            Контакти:
+            <a href="mailto:iryna.pavlenko@gmail.com"
+              >iryna.pavlenko@gmail.com</a>
+          </p>
+        </div>
+      </footer>
+    </div>
 
-<script>
-function showTab(tabId) {
-    const tabs = document.querySelectorAll('#output .tab-content');
-    tabs.forEach(tab => tab.style.display = 'none');
-    document.getElementById(tabId).style.display = 'block';
-}
-</script>
-
-</body>
+    <script>
+      function showTab(tabId) {
+        const tabs = document.querySelectorAll('#output .tab-content');
+        tabs.forEach((tab) => (tab.style.display = 'none'));
+        document.getElementById(tabId).style.display = 'block';}
+    </script>
+  </body>
 </html>
