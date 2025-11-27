@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+ <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,15 +10,13 @@
   <script>
     async function loadPage(page) {
       try {
-        let response = await fetch('lab1content/' + page);
-        let text = await response.text();
+        const response = await fetch('lab1content/' + page);
+        const text = await response.text();
+
         document.getElementById('output').innerHTML = text;
-        const iframe = document.querySelector('#output iframe');
-        if (iframe) {
-          
-          iframe.src = 'lab1content/project/index.html';
-        }
+
       } catch (err) {
+
         document.getElementById('output').innerHTML =
           '<p>Помилка завантаження файлу!</p>';
         console.error(err);
@@ -27,9 +25,8 @@
   </script>
 
   <body>
-    <div class="page-wrapper">
-      <header>
-       
+   <div class="page-wrapper">
+    <header>
         <div class="top-bar">
           <div class="header-container">
             <h1 class="text">
@@ -42,16 +39,16 @@
         <div class="middle-bar">
           <div class="header-container middle-row">
             <div class="author-text">
-              Виконавець: студентка групи ІП-зп51 Павленко І. А.
+              Студентка: Павленко Ірина Анатоліївна група: ІП-зп51
             </div>
 
             <div class="author-photo">
-              <img src="img/photo1.jpg" alt="photo" />
+              <img src="images/student_photo.jpg" alt="photo" />
             </div>
           </div>
         </div>
 
-       <div class="bottom-bar">
+        <div class="bottom-bar">
           <div class="header-container">
             <nav class="menu">
               <a href="index.html">Головна</a>
@@ -76,18 +73,12 @@
               <nav class="left-nav">
                 <ul>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('tema.html')">
-                      Тема. Мета. Місце розташування сайту
+                    <a href="javascript:void(0)" onclick="loadPage('tema.html')">Тема. Мета. Місце розташування сайту
                     </a>
                   </li>
 
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('description.html')"                    >
-                      Опис застосунку (інтерактивний каталог книг). Предметна
+                    <a href="javascript:void(0)" onclick="loadPage('description.html')">Опис застосунку (інтерактивний каталог книг). Предметна
                       область. Бізнес-логіка
                     </a>
                   </li>
@@ -96,70 +87,37 @@
                     <h3>Структура документа</h3>
                     <ul class="sub-menu">
                       <li>
-                        <a
-                          href="javascript:void(0)"
-                          onclick="loadPage('table.html')"
-                          >HTML-код таблиці</a>
+                        <a href="javascript:void(0)" onclick="loadPage('table.html')">HTML-код таблиці</a>
                       </li>
                       <li>
-                        <a
-                          href="javascript:void(0)"
-                          onclick="loadPage('image.html')"
-                          >HTML-код зображення</a>
+                        <a href="javascript:void(0)" onclick="loadPage('image.html')">HTML-код зображення</a>
                       </li>
                       <li>
-                        <a
-                          href="javascript:void(0)"
-                          onclick="loadPage('form.html')"
-                          >HTML-код форми</a>
+                        <a href="javascript:void(0)" onlick="loadPage('form.html')">HTML-код форми</a>
                       </li>
                       <li>
-                        <a
-                          href="javascript:void(0)"
-                          onclick="loadPage('list.html')"
-                          >HTML-код списків</a>
-                      </li>
+                        <a href="javascript:void(0)" onclick="loadPage('list.html')">HTML-код списків</a></li>
                     </ul>
                   </li>
 
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('mainpage.html')"                  
-                        >
-                      Головна сторінка застосунку
-                    </a>
+                    <a href="javascript:void(0)" onclick="loadPage('mainpage.html')">Головна сторінка застосунку</a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('maincode.html')"
-                    >
-                      Код головної сторінки (фрагменти)
-                    </a>
+                    <a href="javascript:void(0)" onclick="loadPage('maincode.html')">Код головної сторінки (фрагменти)</a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('conclusions.html')"
-                    >
-                      Висновки
-                    </a>
+                    <a href="javascript:void(0)" onclick="loadPage('conclusions.html')">Висновки</a>
                   </li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      onclick="loadPage('questions.html')"
-                    >
-                      Контрольні питання
-                    </a>
+                    <a href="javascript:void(0)" onclick="loadPage('questions.html')">Контрольні питання</a>
                   </li>
                 </ul>
               </nav>
             </aside>
           </div>
 
-       <div class="right-side">
+          <div class="right-side">
             <div class="info-card" id="output">
               <h2>Звіт до Лабораторної роботи №1</h2>
               <p>Оберіть пункт меню зліва для перегляду змісту звіту.</p>
@@ -171,13 +129,11 @@
       <footer class="footer">
         <div class="footer-container">
           <p>
-            © 2025 Павленко І. А. – Звіти з лабораторних робіт з дисципліни
-            "Проєктування WEB-застосувань"
+            © 2025 Павленко І. А. – Звіт з лабораторних робіт з дисципліни "Проєктування WEB-застосувань"
           </p>
           <p>
             Контакти:
-            <a href="mailto:iryna.pavlenko@gmail.com"
-              >iryna.pavlenko@gmail.com</a>
+            <a href="mailto:iryna.pavlenko@gmail.com">iryna.pavlenko@gmail.com</a>
           </p>
         </div>
       </footer>

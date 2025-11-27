@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Звіт Лабораторна 2 | Павленко І. А.</title>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      
+   
+   <script>
       async function loadPage(page) {
         try {
-          let response = await fetch('lab2content/' + page); 
-          let text = await response.text(); 
-          document.getElementById('output').innerHTML = text; 
+          let response = await fetch('lab2content/' + page);
+          let text = await response.text();
+          document.getElementById('output').innerHTML = text;
+
         } catch (err) {
-        
+
           document.getElementById('output').innerHTML =
             '<p>Помилка завантаження файлу!</p>';
           console.error(err);
@@ -21,10 +22,11 @@
       }
     </script>
   </head>
+  
   <body>
-     <div class="page-wrapper">
+    <div class="page-wrapper">
       <header>
-       <div class="top-bar">
+        <div class="top-bar">
           <div class="header-container">
             <h1 class="text">
               ЗВІТ ПО ЛАБОРАТОРНИМ РОБОТАМ З ДИСЦИПЛІНИ "Проєктування
@@ -36,16 +38,16 @@
         <div class="middle-bar">
           <div class="header-container middle-row">
             <div class="author-text">
-              Виконавець: студентка групи ІП-зп51 Павленко І. А.
+              Студентка: Павленко Ірина Анатоліївна група: ІП-зп51
             </div>
 
             <div class="author-photo">
-              <img src="img/photo1.jpg" alt="photo" />
+              <img src="images/student_photo.jpg" alt="photo" />
             </div>
           </div>
         </div>
 
-       <div class="bottom-bar">
+        <div class="bottom-bar">
           <div class="header-container">
             <nav class="menu">
               <a href="index.html">Головна</a>
@@ -65,15 +67,14 @@
 
       <div class="main-container">
         <div class="content-section">
-         <div class="left-side">
+          <div class="left-side">
             <aside>
               <nav class="left-nav">
                 <ul>
                   <li>
                     <a
                       href="javascript:void(0)"
-                      onclick="loadPage('tema2.html')"
-                    >
+                      onclick="loadPage('tema2.html')">
                       Тема. Мета ЛР №2. Місце розташування сайту
                     </a>
                   </li>
@@ -81,8 +82,7 @@
                   <li>
                     <a
                       href="javascript:void(0)"
-                      onclick="loadPage('styles.html')"
-                    >
+                      onclick="loadPage('styles.html')">
                       Способи підключення стилів
                     </a>
                   </li>
@@ -93,8 +93,7 @@
                       <li>
                         <a
                           href="javascript:void(0)"
-                          onclick="loadPage('tag.html')"
-                        >
+                          onclick="loadPage('tag.html')">
                           Селектор тегу
                         </a>
                       </li>
@@ -102,8 +101,7 @@
                       <li>
                         <a
                           href="javascript:void(0)"
-                          onclick="loadPage('class.html')"
-                        >
+                          onclick="loadPage('class.html')">
                           Селектор класу
                         </a>
                       </li>
@@ -111,8 +109,7 @@
                       <li>
                         <a
                           href="javascript:void(0)"
-                          onclick="loadPage('ids.html')"
-                        >
+                          onclick="loadPage('ids.html')">
                           Селектори ідентифікаторів
                         </a>
                       </li>
@@ -120,8 +117,7 @@
                       <li>
                         <a
                           href="javascript:void(0)"
-                          onclick="loadPage('other-selectors.html')"
-                        >
+                          onclick="loadPage('other-selectors.html')">
                           Інші селектори
                         </a>
                       </li>
@@ -137,8 +133,7 @@
                   <li>
                     <a
                       href="javascript:void(0)"
-                      onclick="loadPage('conclusions.html')"
-                    >
+                      onclick="loadPage('conclusions.html')">
                       Висновки до ЛР №2
                     </a>
                   </li>
@@ -146,8 +141,7 @@
                   <li>
                     <a
                       href="javascript:void(0)"
-                      onclick="loadPage('questions.html')"
-                    >
+                      onclick="loadPage('questions.html')">
                       Контрольні питання
                     </a>
                   </li>
@@ -172,8 +166,7 @@
           <p>
             Контакти:
             <a href="mailto:iryna.pavlenko@gmail.com"
-              >iryna.pavlenko@gmail.com</a
-            >
+              >iryna.pavlenko@gmail.com</a>
           </p>
         </div>
       </footer>
